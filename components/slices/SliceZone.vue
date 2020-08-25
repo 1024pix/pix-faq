@@ -50,6 +50,10 @@
       <template v-if="slice.slice_type === 'article'">
         <article-slice :slice="slice" :button-class="'section-demo__button'" />
       </template>
+      <template v-if="slice.slice_type === 'article'">
+        <article-slice :content="slice" :button-class="'section-demo__button'">
+        </article-slice>
+      </template>
     </section>
   </div>
 </template>
