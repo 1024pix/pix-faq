@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="nav-top">
+    <div class="nav-top">
       <ul>
         <li v-for="item in topItems" :key="item.id" class="nav-top__link">
           <pix-link :field="item.primary.link">
@@ -23,7 +23,7 @@
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
     <div class="nav-bottom">
       <hr class="nav-bottom__bar" />
       <ul>

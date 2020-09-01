@@ -74,4 +74,8 @@ export default {
     '<br/>Si vous avez besoin d’aide, vous pouvez consulter le ' +
     '<a href="https://support.pix.fr/">support</a>.' +
     '</p>',
+  layout: {
+    'main-nav': 'Navigation principale',
+    'footer-nav': 'Navigation secondaire de pied de page',
+  },
 }

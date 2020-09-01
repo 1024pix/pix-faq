@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h4 class="text text-sm text-up text-left text-black mb-2 semi-bold">
+    <p class="text text-sm text-up text-left text-black mb-2 semi-bold">
       {{ $t('about-title') }}
-    </h4>
+    </p>
     <ul class="unstyled">
       <li v-for="(item, index) in aboutNavItems" :key="`item-${index}`">
         <pix-link

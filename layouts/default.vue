@@ -2,7 +2,9 @@
   <div id="app" class="app-viewport">
     <hot-news-banner />
     <header-nav />
-    <nuxt />
+    <main>
+      <nuxt />
+    </main>
     <app-footer />
   </div>
 </template>

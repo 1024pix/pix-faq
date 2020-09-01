@@ -1,5 +1,9 @@
 <template>
-  <footer>
+  <nav
+    class="footer-nav"
+    role="navigation"
+    aria-label="$t('layout.footer-nav')"
+  >
     <div class="container padding-container">
       <div class="sitelogo">
         <div :class="{ sitelogo__row: showUnescoLogo === true }">
@@ -34,11 +38,11 @@
           <resources-nav />
         </div>
         <div class="padding social-links">
-          <h4
+          <div
             class="text text-sm text-up text-left text-black mb-3 semi-bold social-links__title"
           >
             {{ $t('social-networks-title') }}
-          </h4>
+          </div>
           <ul class="unstyled social-links__list">
             <li class="social-links__item social-link">
               <a
@@ -80,7 +84,7 @@
         </div>
       </div>
     </div>
-  </footer>
+  </nav>
 </template>
 
 <script>
@@ -101,7 +105,7 @@ export default {
 </script>
 
 <style lang="scss">
-footer {
+.footer-nav {
   background-color: #f5f5f5;
   padding-top: 34px;
   padding-bottom: 64px;

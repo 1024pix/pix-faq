@@ -1,8 +1,8 @@
 <template>
   <div class="resources-nav">
-    <h4 class="text text-sm text-up text-left text-black mb-2 semi-bold">
+    <p class="text text-sm text-up text-left text-black mb-2 semi-bold">
       {{ $t('resources-title') }}
-    </h4>
+    </p>
     <ul class="unstyled">
       <li v-for="(item, index) in resourcesNavItems" :key="`item-${index}`">
         <pix-link
