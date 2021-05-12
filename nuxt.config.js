@@ -63,6 +63,7 @@ export default {
     { src: '~plugins/slide-menu', ssr: false },
     '~plugins/vue-js-modal',
     { src: '~/plugins/prismicLinks', ssr: false },
+    '~/plugins/metabase-fetch.js',
   ],
 
   /*
@@ -139,7 +140,12 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true,
+  },
+  proxy: {
+    '/metabase': { target: 'https://metabase.pix.fr/', pathRewrite: {'^/metabase': ''} }
+  },
   i18n: {
     defaultLocale: 'fr-fr',
     locales:

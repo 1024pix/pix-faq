@@ -8,6 +8,7 @@
 
 <script>
 import ChartSection from '~/components/ChartSection'
+import metabaseFetch from '~/plugins/metabase-fetch'
 
 export default {
   name: 'StatSlice',
@@ -24,6 +25,17 @@ export default {
       default: 0,
     },
   },
+  data() {
+    return {
+      value: [],
+      label: [],
+    }
+  },
+  async fetch() {
+    const { value, label } = await metabaseFetch(this.$axios).getCard()
+    this.value = value
+    this.label = label
+  },
   computed: {
     content() {
       return this.slice.primary
@@ -31,7 +43,6 @@ export default {
     data() {
       return this.slice.items
     },
-
     chartData() {
       function backgroundColorFrom(color) {
         const hex = color.replace('#', '')
@@ -42,9 +53,10 @@ export default {
         return 'rgba(' + r + ',' + g + ',' + b + ',0.2)'
       }
 
-      const valueData = this.data.map((data) => data.data_value)
-      const labelData = this.data.map((data) => data.data_date)
-      const chartData = {
+      const valueData = this.value
+      const labelData = this.label
+
+      return {
         datasets: [
           {
             backgroundColor: backgroundColorFrom(
@@ -58,7 +70,6 @@ export default {
         ],
         labels: labelData,
       }
-      return chartData
     },
   },
 }
