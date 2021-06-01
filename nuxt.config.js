@@ -14,6 +14,10 @@ export default {
   env: {
     isPixSite: process.env.SITE === 'pix-site',
     isPixPro: process.env.SITE === 'pix-pro',
+    metabase: {
+      username: process.env.METABASE_USERNAME,
+      password: process.env.METABASE_PASSWORD,
+    },
   },
   dir: {
     pages: `pages/${process.env.SITE}`,
@@ -63,7 +67,6 @@ export default {
     { src: '~plugins/slide-menu', ssr: false },
     '~plugins/vue-js-modal',
     { src: '~/plugins/prismicLinks', ssr: false },
-    '~/plugins/metabase-fetch.js',
   ],
 
   /*
@@ -144,7 +147,10 @@ export default {
     proxy: true,
   },
   proxy: {
-    '/metabase': { target: 'https://metabase.pix.fr/', pathRewrite: {'^/metabase': ''} }
+    '/metabase': {
+      target: 'https://metabase.pix.fr/',
+      pathRewrite: { '^/metabase': '' },
+    },
   },
   i18n: {
     defaultLocale: 'fr-fr',
