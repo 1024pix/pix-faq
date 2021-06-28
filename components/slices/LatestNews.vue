@@ -29,13 +29,8 @@
 </template>
 
 <script>
-import NewsItemCard from '../NewsItemCard'
-
 export default {
   name: 'LatestNews',
-  components: {
-    NewsItemCard,
-  },
   props: {
     slice: {
       type: Object,

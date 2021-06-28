@@ -6,7 +6,7 @@
         :key="`footer-slice-left-${index}`"
       >
         <template v-if="slice.slice_type === 'logos_zone'">
-          <logos-zone :slice="slice" class="footer-left__logos" />
+          <slices-logos-zone :slice="slice" class="footer-left__logos" />
         </template>
         <prismic-rich-text
           v-if="slice.slice_type === 'text'"
@@ -31,7 +31,7 @@
       </div>
     </div>
     <div class="footer__right">
-      <navigation-group
+      <slices-navigation-group
         v-for="(slice, index) in navigationGroups"
         :key="`footer-slice-right-${index}`"
         class="footer-right__navigation"
@@ -44,15 +44,9 @@
 <script>
 import { mapState } from 'vuex'
 import { groupBy } from 'lodash'
-import LogosZone from '@/components/slices/LogosZone'
-import NavigationGroup from '@/components/slices/NavigationGroup'
 
 export default {
   name: 'FooterSliceZone',
-  components: {
-    LogosZone,
-    NavigationGroup,
-  },
   data() {
     return {
       socialMediasHoverMap: {},

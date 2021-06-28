@@ -26,7 +26,6 @@
   </div>
 </template>
 <script>
-import NewsItemCard from '@/components/NewsItemCard'
 import { documentFetcher } from '~/services/document-fetcher'
 
 export default {
@@ -37,9 +36,6 @@ export default {
       'fr-fr': '/actualites',
       'en-gb': '/news',
     },
-  },
-  components: {
-    NewsItemCard,
   },
   async asyncData({ app, error, req }) {
     try {

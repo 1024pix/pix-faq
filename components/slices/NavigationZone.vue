@@ -41,13 +41,8 @@
 </template>
 
 <script>
-import NavigationDropdown from '@/components/NavigationDropdown'
-
 export default {
   name: 'NavigationZone',
-  components: {
-    NavigationDropdown,
-  },
   props: {
     slice: {
       type: Object,

@@ -7,13 +7,8 @@
 </template>
 
 <script>
-import ChartSection from '~/components/ChartSection'
-
 export default {
   name: 'StatSlice',
-  components: {
-    ChartSection,
-  },
   props: {
     slice: {
       type: Object,

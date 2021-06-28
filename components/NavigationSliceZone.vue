@@ -12,10 +12,10 @@
           :key="`navigation-slice-left-${index}`"
         >
           <template v-if="slice.slice_type === 'logos_zone'">
-            <logos-zone :slice="slice" />
+            <slices-logos-zone :slice="slice" />
           </template>
           <template v-if="slice.slice_type === 'navigation_zone'">
-            <navigation-zone :slice="slice" />
+            <slices-navigation-zone :slice="slice" />
           </template>
         </section>
       </div>
@@ -25,7 +25,7 @@
         class="navigation-slice-zone-content__right-side"
       >
         <template v-if="slice.slice_type === 'actions_zone'">
-          <actions-zone :slice="slice" />
+          <slice-actions-zone :slice="slice" />
         </template>
       </section>
     </div>
@@ -35,19 +35,8 @@
 <script>
 import { mapState } from 'vuex'
 import { groupBy } from 'lodash'
-import LogosZone from '@/components/slices/LogosZone'
-import NavigationZone from '@/components/slices/NavigationZone'
-import ActionsZone from '@/components/slices/ActionsZone'
-import BurgerMenuNav from '@/components/BurgerMenuNav'
-
 export default {
   name: 'NavigationSliceZone',
-  components: {
-    ActionsZone,
-    LogosZone,
-    NavigationZone,
-    BurgerMenuNav,
-  },
   computed: {
     isPixPro() {
       return process.env.isPixPro

@@ -69,13 +69,8 @@
 </template>
 
 <script>
-import CtaButton from '../CtaButton'
-
 export default {
   name: 'Article',
-  components: {
-    CtaButton,
-  },
   props: {
     slice: {
       type: Object,

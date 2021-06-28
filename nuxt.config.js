@@ -64,7 +64,7 @@ const config = {
     '~plugins/vue-js-modal',
     { src: '~/plugins/prismicLinks', ssr: false },
   ],
-
+  components: true,
   /*
    ** Nuxt.js dev-modules
    */

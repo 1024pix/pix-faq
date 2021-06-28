@@ -13,9 +13,6 @@
 </template>
 
 <script>
-import FormPage from '@/components/FormPage'
-import SimplePage from '@/components/SimplePage'
-import SliceZone from '@/components/SliceZone'
 import { documentFetcher } from '~/services/document-fetcher'
 
 export default {
@@ -26,11 +23,6 @@ export default {
       'fr-fr': '/:uid',
       'en-gb': '/:uid',
     },
-  },
-  components: {
-    FormPage,
-    SimplePage,
-    SliceZone,
   },
   async asyncData({ params, app, req, error, currentPagePath }) {
     try {

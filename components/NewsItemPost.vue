@@ -25,11 +25,8 @@
 </template>
 
 <script>
-import SliceZone from '@/components/SliceZone'
-
 export default {
   name: 'NewsItemPost',
-  components: { SliceZone },
   props: {
     newsItem: {
       type: Object,
