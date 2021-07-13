@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import SliceZone from '@/components/SliceZone'
 import { documentFetcher } from '~/services/document-fetcher'
 
 export default {
@@ -16,9 +15,6 @@ export default {
       'fr-fr': '/',
       'en-gb': '/',
     },
-  },
-  components: {
-    SliceZone,
   },
   async asyncData({ app, req, error, currentPagePath }) {
     try {
@@ -66,5 +62,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss"></style>

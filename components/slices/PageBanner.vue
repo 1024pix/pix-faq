@@ -49,11 +49,8 @@
 </template>
 
 <script>
-import MediaPlayer from '../MediaPlayer'
-
 export default {
   name: 'PageBanner',
-  components: { MediaPlayer },
   props: {
     slice: {
       type: Object,

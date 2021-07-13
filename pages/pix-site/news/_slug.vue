@@ -10,7 +10,6 @@
 </template>
 
 <script>
-import NewsItemPost from '@/components/NewsItemPost'
 import { documentFetcher } from '~/services/document-fetcher'
 
 export default {
@@ -20,9 +19,6 @@ export default {
       'fr-fr': '/actualites/:slug',
       'en-gb': '/news/:slug',
     },
-  },
-  components: {
-    NewsItemPost,
   },
   async asyncData({ params, app, req, error, route, currentPagePath }) {
     try {
@@ -51,5 +47,3 @@ export default {
   },
 }
 </script>
-
-<style></style>

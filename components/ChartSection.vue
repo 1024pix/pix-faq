@@ -5,13 +5,8 @@
 </template>
 
 <script>
-import LineChart from '@/components/LineChart'
-
 export default {
   name: 'ChartSection',
-  components: {
-    LineChart,
-  },
   props: {
     data: {
       type: Object,

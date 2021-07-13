@@ -7,15 +7,8 @@
 </template>
 
 <script>
-import LanguageSwitcher from '@/components/LanguageSwitcher'
-import BurgerMenuNavItems from '@/components/BurgerMenuNavItems'
-
 export default {
   name: 'BurgerMenuNav',
-  components: {
-    LanguageSwitcher,
-    BurgerMenuNavItems,
-  },
   props: {
     items: {
       type: Object,

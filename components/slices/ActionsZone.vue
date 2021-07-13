@@ -19,13 +19,8 @@
 </template>
 
 <script>
-import LanguageSwitcher from '@/components/LanguageSwitcher'
-
 export default {
   name: 'ActionsZone',
-  components: {
-    LanguageSwitcher,
-  },
   props: {
     slice: {
       type: Object,
